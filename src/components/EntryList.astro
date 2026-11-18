@@ -1,0 +1,29 @@
+---
+import type { projects } from '../data/site';
+
+interface Props {
+  entries: typeof projects;
+}
+
+const { entries } = Astro.props;
+---
+
+<ul class="entries">
+  {
+    entries.map((entry) => (
+      <li>
+        <span class="entry-date">{entry.date}</span>
+        <span>
+          <a class="entry-title" href={entry.href}>
+            {entry.title}
+          </a>
+          {entry.extra && (
+            <a class="entry-extra" href={entry.extra.href}>
+              ({entry.extra.label})
+            </a>
+          )}
+        </span>
+      </li>
+    ))
+  }
+</ul>

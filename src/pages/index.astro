@@ -1,0 +1,32 @@
+---
+import EntryList from '../components/EntryList.astro';
+import Layout from '../layouts/Layout.astro';
+import { bio, links, photo, projects } from '../data/site';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<Layout>
+  <div class="columns">
+    <img class="portrait" src={`${base}${photo.src}`} alt={photo.alt} width="265" height="265" />
+    <div class="content">
+      <section class="bio">
+        {bio.map((paragraph) => <p set:html={paragraph} />)}
+        <p class="links">
+          {
+            links.map((link, index) => (
+              <>
+                {index > 0 && ' / '}
+                <a href={link.href}>{link.label}</a>
+              </>
+            ))
+          }
+        </p>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <EntryList entries={projects} />
+      </section>
+    </div>
+  </div>
+</Layout>

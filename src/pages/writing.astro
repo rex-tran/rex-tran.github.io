@@ -1,0 +1,14 @@
+---
+import EntryList from '../components/EntryList.astro';
+import Layout from '../layouts/Layout.astro';
+import { writing } from '../data/site';
+---
+
+<Layout title="Writing">
+  <div class="columns">
+    <div class="content offset">
+      <h1>Writing</h1>
+      <EntryList entries={writing} />
+    </div>
+  </div>
+</Layout>
