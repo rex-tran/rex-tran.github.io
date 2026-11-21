@@ -12,7 +12,7 @@ export const photo = {
 
 // Each string is one paragraph, and may contain simple HTML such as <a> links.
 export const bio = [
-  'Hello, I am Rex. I am a current undergraduate student at Princeton University.',
+  'Hi, my name is Rex and I am a student at Princeton.',
   'I work with the Kreike Lab on researching machine learning models to better understand historical aerial data of Africa.',
   'I am also a part of the TigerTales Blog Team.',
 ];
@@ -26,12 +26,34 @@ type Entry = {
   date: string; // Shown as written, for example "2026 Nov"
   title: string;
   href?: string; // Leave out to show the title as plain text
-  extra?: { label: string; href: string }; // Small blue link after the title
+  extras?: { label: string; href: string }[]; // Small blue links after the title
 };
 
 // Newest first. The home page shows all of these.
 export const projects: Entry[] = [
-  { date: '2026 Nov', title: 'Pairatech.', href: 'https://pairatech.vercel.app/pre-arrival' },
+  {
+    date: '2026 Nov',
+    title: 'Pairatech.',
+    href: 'https://pairatech.vercel.app/pre-arrival',
+    extras: [{ label: 'devpost', href: 'https://devpost.com/software/pairatech' }],
+  },
+  {
+    date: '2026 May',
+    title: 'AI Exploration Lab Entry: How do LLMs handle poetic nuance?',
+    href: 'https://ai-exploration-lab.vercel.app/posters/rex-tran.pdf',
+  },
+  {
+    date: '2026 Apr',
+    title: 'Vietnam Trail.',
+    href: 'https://www.we-are-saigone.us/',
+    extras: [
+      { label: 'devpost', href: 'https://devpost.com/software/vietnam-trail' },
+      {
+        label: 'article',
+        href: 'https://converge.ai/enter/blog/heritage-in-pixels-the-story-that-needed-to-be-built',
+      },
+    ],
+  },
 ];
 
 // Newest first. Leave out href for an entry that isn't published yet.

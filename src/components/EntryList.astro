@@ -21,11 +21,11 @@ const { entries } = Astro.props;
           ) : (
             <span class="entry-title">{entry.title}</span>
           )}
-          {entry.extra && (
-            <a class="entry-extra" href={entry.extra.href}>
-              ({entry.extra.label})
+          {entry.extras?.map((extra) => (
+            <a class="entry-extra" href={extra.href}>
+              ({extra.label})
             </a>
-          )}
+          ))}
         </span>
       </li>
     ))
