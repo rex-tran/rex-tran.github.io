@@ -18,7 +18,7 @@ export const bio = [
 ];
 
 export const links = [
-  { label: 'GitHub', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/rex-tran' },
   { label: 'LinkedIn', href: '#' },
   { label: 'Resume', href: '#' },
   { label: 'Email', href: '#' },
