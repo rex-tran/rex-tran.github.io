@@ -13,7 +13,7 @@ export const photo = {
 // Each string is one paragraph, and may contain simple HTML such as <a> links.
 export const bio = [
   'Hi, my name is Rex and I am a student at Princeton.',
-  'I work with the Kreike Lab on researching machine learning models to better understand historical aerial data of Africa.',
+  'I work with the Kreike Lab on researching machine learning models to better understand historical aerial data of north-central Namibia.',
   'I am also a part of the TigerTales Blog Team.',
 ];
 
