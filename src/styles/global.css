@@ -107,6 +107,7 @@ main {
 
 .bio p {
   margin: 0 0 14px;
+  color: #555350;
 }
 
 .bio p:first-child {
