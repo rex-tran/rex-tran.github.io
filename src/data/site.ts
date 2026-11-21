@@ -12,9 +12,9 @@ export const photo = {
 
 // Each string is one paragraph, and may contain simple HTML such as <a> links.
 export const bio = [
-  'One sentence about who you are.',
-  'What you are working on or studying now.',
-  'Something you have done before, with <a href="#">a link to it</a>.',
+  'Hello, I am Rex. I am a current undergraduate student at Princeton University.',
+  'I work with the Kreike Lab on researching machine learning models to better understand historical aerial data of Africa.',
+  'I am also a part of the TigerTales Blog Team.',
 ];
 
 export const links = [
@@ -25,29 +25,14 @@ export const links = [
 type Entry = {
   date: string; // Shown as written, for example "2026 Nov"
   title: string;
-  href: string;
+  href?: string; // Leave out to show the title as plain text
   extra?: { label: string; href: string }; // Small blue link after the title
 };
 
 // Newest first. The home page shows all of these.
 export const projects: Entry[] = [
-  {
-    date: '2026 Nov',
-    title: 'Your most recent project.',
-    href: '#',
-    extra: { label: 'code', href: '#' },
-  },
-  {
-    date: '2026 Jan',
-    title: 'An earlier project.',
-    href: '#',
-    extra: { label: 'demo', href: '#' },
-  },
-  { date: '2025 Jun', title: 'Another project.', href: '#' },
+  { date: '2026 Nov', title: 'Pairatech.', href: 'https://pairatech.vercel.app/pre-arrival' },
 ];
 
-// Newest first.
-export const writing: Entry[] = [
-  { date: '2026 Nov', title: 'Title of something you wrote.', href: '#' },
-  { date: '2026 Mar', title: 'Title of an earlier post.', href: '#' },
-];
+// Newest first. Leave out href for an entry that isn't published yet.
+export const writing: Entry[] = [{ date: '2026 Nov', title: 'In progress.' }];

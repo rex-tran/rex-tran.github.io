@@ -14,9 +14,13 @@ const { entries } = Astro.props;
       <li>
         <span class="entry-date">{entry.date}</span>
         <span>
-          <a class="entry-title" href={entry.href}>
-            {entry.title}
-          </a>
+          {entry.href ? (
+            <a class="entry-title" href={entry.href}>
+              {entry.title}
+            </a>
+          ) : (
+            <span class="entry-title">{entry.title}</span>
+          )}
           {entry.extra && (
             <a class="entry-extra" href={entry.extra.href}>
               ({entry.extra.label})
