@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 <Layout>
   <div class="columns">
-    <img class="portrait" src={`${base}${photo.src}`} alt={photo.alt} width="601" height="1000" />
+    <img class="portrait" src={`${base}${photo.src}`} alt={photo.alt} width="628" height="1000" />
     <div class="content">
       <section class="bio">
         {bio.map((paragraph) => <p set:html={paragraph} />)}

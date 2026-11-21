@@ -6,7 +6,7 @@ export const description = 'Personal website of Rex Tran.';
 
 // Put your photo in public/ (a square image works best) and update this path.
 export const photo = {
-  src: 'pump-polaroid.jpg',
+  src: 'pump-polaroid-v2.jpg',
   alt: 'Portrait of Rex Tran',
 };
 
